@@ -1,9 +1,9 @@
-;;; -*- mode:lisp; coding:windows-1251  -*-
+;;; -*- mode:lisp; coding:utf-8  -*-
 
 ;;;
 ;;; This file is part of the MOREN environment
 ;;; JQ - JSCL wrapper for JQuery library
-;;; Copyright © 2017 Vladimir Mezentsev
+;;; Copyright Â© 2017 Vladimir Mezentsev
 ;;;
 
 
