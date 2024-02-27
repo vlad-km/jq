@@ -18,99 +18,54 @@
 
 (in-package :jq)
 
-;;;
 ;;; These methods allow us to insert new content surrounding existing content.
-;;;
 ;;; See: http://api.jquery.com/category/manipulation/dom-insertion-around/
-;;;
 
 
 ;;; .unwrap()
-;;;
 ;;; Remove the parents of the set of matched elements from the DOM, leaving the matched elements in their place.
-;;;
-;;; (jq:unwrap jqe)
-;;; (jq:unwrap jqe selector-string)
-;;;
-
-(defun unwrap (jse &optional midagi)
-    (if midagi
-        (funcall ((oget jse "unwrap" "bind") jse midagi))
-        (funcall ((oget jse "unwrap" "bind") jse))))
-
-(export '(jq::unwrap))
-
-
-
+;;;   (jq:unwrap jqe)
+;;;   (jq:unwrap jqe selector-string)
+(export '(unwrap))
+(defun unwrap (jse &optional (midagi "")) (@call (jse "unwrap") midagi))
 
 ;;; .wrap()
-;;;
 ;;; Wrap an HTML structure around each element in the set of matched elements.
-;;;
 ;;; .wrap( wrappingElement)
 ;;;     Returns: jQuery
 ;;;     Description: Wrap an HTML structure around each element in the set of matched elements.
-;;;
-;;;
 ;;;        wrappingElement
 ;;;          Type: Selector or htmlString or Element or jQuery
-;;;
 ;;;          function
 ;;;          Type: Function( Integer index ) => String or jQuery
-;;;
-
-(defun wrap (jse wre)
-    (funcall ((oget jse "wrap" "bind") jse wre)))
-
 (export '(jq::wrap))
-
+(defun wrap (jse wre) (@call (jse "wrap") wre))
 
 ;;; .wrapAll()
-;;;
 ;;; Wrap an HTML structure around all elements in the set of matched elements.
-;;;
 ;;; .wrapAll( wrappingElement)
 ;;;     Returns: jQuery
 ;;;     Description: A selector, element, HTML string, or jQuery object specifying
 ;;;                  the structure to wrap around the matched elements.
-;;;
-;;;
 ;;;        wrappingElement
 ;;;          Type: Selector or htmlString or Element or jQuery
-;;;
 ;;;          function
 ;;;          Type: Function( Integer index ) => String or jQuery
-;;;
-
-(defun wrap-All (jse wre)
-    (funcall ((oget jse "wrapAll" "bind") jse wre)))
-
 (export '(jq::wrap-All))
-
-
-
+(defun wrap-All (jse wre) (@call (jse "wrapAll") wre))
 
 ;;; .wrapInner()
-;;;
 ;;; Wrap an HTML structure around the content of each element in the set of matched elements.
-;;;
 ;;; .wrapInner( wrappingElement)
 ;;;     Returns: jQuery
 ;;;     Description: A selector, element, HTML string, or jQuery object specifying
 ;;;                  the structure to wrap around the matched elements.
-;;;
-;;;
 ;;;        wrappingElement
 ;;;          Type: Selector or htmlString or Element or jQuery
-;;;
 ;;;          function
 ;;;          Type: Function( Integer index ) => String or jQuery
-;;;
-
-(defun wrap-Inner (jse wre)
-    (funcall ((oget jse "wrapInner" "bind") jse wre)))
-
 (export '(jq::wrap-Inner))
+(defun wrap-Inner (jse wre) (@call (jse "wrapInner") wre))
 
 
 (in-package :cl-user)
