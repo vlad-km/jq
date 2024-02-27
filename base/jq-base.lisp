@@ -18,22 +18,14 @@
 
 (in-package :jq)
 
-;;;
-;;;
-;;; ($ string)
-;;; ($ dom-element)
-;;;
+(defmacro @call ((obj &rest methods) &body args)
+  `((jscl::oget ,obj ,@methods) ,@args))
 
-(defun $ (&optional one two)
-    (if two
-        (#j:$ one two)
-        (#j:$ one)))
-
-(fset 'query #'$)
-(export '(jq::$ jq::query))
+(defmacro @get (obj &rest pathes)
+  `(jscl::oget ,obj ,@pathes ))
 
 
-
+(defun $ (a &optional (o "")) (#j:$ a o))
 
 
 (in-package :cl-user)
