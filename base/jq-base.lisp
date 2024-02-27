@@ -1,30 +1,31 @@
-;;; -*- mode:lisp; coding:utf-8  -*-
+;;; -*- mode:lisp;  coding:utf-8 -*-
+#|
 
-;;;
-;;; This file is part of the MOREN environment
-;;; JQ - JSCL wrapper for JQuery library
-;;; Copyright © 2017 Vladimir Mezentsev
-;;;
-
+            /\___/\
+            )     (
+           =\     /=                  if this code is not work, i dont know who wrote this code
+             )   (                    Copyright (c) 2017,2024  @vlad-km
+            /     \                   
+            )     (                   
+           /       \                  Electron >= electron@21.2.2
+           \       /                  JSCL Moren edition
+      jgs   \__ __/
+               ))
+              //
+             ((
+              \)
+|#
 
 (in-package :jq)
 
-;;;
-;;;
-;;; ($ string)
-;;; ($ dom-element)
-;;;
+(defmacro @call ((obj &rest methods) &body args)
+  `((jscl::oget ,obj ,@methods) ,@args))
 
-(defun $ (&optional one two)
-    (if two
-        (#j:$ one two)
-        (#j:$ one)))
-
-(fset 'query #'$)
-(export '(jq::$ jq::query))
+(defmacro @get (obj &rest pathes)
+  `(jscl::oget ,obj ,@pathes ))
 
 
-
+(defun $ (a &optional (o "")) (#j:$ a o))
 
 
 (in-package :cl-user)
