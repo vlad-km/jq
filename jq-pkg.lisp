@@ -17,6 +17,11 @@
 |#
 
 (eval-when (:compile-toplevel :load-toplevel :execute)
+  (let* ((need "1.8.3")
+         (present #j:$:fn:jquery))
+    (cond ((string= need present) nil)
+          ((string<= need present) nil)
+          (t (error "Wrong JQUERY version. Need: ~a Present: ~a." need present))))
   (unless (find-package "JQ") (defpackage :jq  (:use :cl)))) 
 
 ;;; EOF
