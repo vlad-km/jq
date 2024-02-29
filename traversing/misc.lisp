@@ -22,6 +22,10 @@ https://api.jquery.com/category/traversing/
 
 ;;; .add()
 ;;; Create a new jQuery object with elements added to the set of matched elements.
+(export '([jq].fade-to))
+(defun [jq].fade-to (jq )
+)
+
 
 ;;; .addBack()
 ;;; Add the previous set of elements on the stack to the current set, optionally filtered by a selector.

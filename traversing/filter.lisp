@@ -22,6 +22,9 @@
 
 ;;; .eq()
 ;;; Reduce the set of matched elements to the one at the specified index.
+(export '([jq].fade-to))
+(defun [jq].fade-to (jq )
+)
 
 ;;; .even()
 ;;; Reduce the set of matched elements to the even ones in the set, numbered from zero.
