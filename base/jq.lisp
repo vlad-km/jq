@@ -30,8 +30,8 @@
 ;;; Retrieve the DOM elements matched by the jQuery object.
 ;;; Without a parameter, .get() returns an array of all of the elements
 ;;; A negative index is counted from the end of the matched set
-(export '(get))
-(defun get (jq &optional (index 0)) (@call (jq "get")))
+(export '([q].get))
+(defun [q].get (jq &optional (index 0)) (@call (jq "get")))
 
 
 ;;; .index()Returns: Integer
@@ -53,13 +53,13 @@
 ;;;   the position of the first element within the jQuery object relative to the elements matched by the selector.
 ;;; - If the element is not found, .index() will return -1.
 ;;; See https://api.jquery.com/index/
-(export '(index))
-(defun index (jq &optional (midage "")) (@call (jq "index") midagi))
+(export '([q].index))
+(defun [q].index (jq &optional (midage "")) (@call (jq "index") midagi))
 
 ;;; .toArray()
 ;;; Retrieve all the elements contained in the jQuery set, as an array.
-(export '(to-array))
-(defun to-array (jq) (@call (jq "toArray")))
+(export '([q].to-array))
+(defun [q].to-array (jq) (@call (jq "toArray")))
 
 
 (in-package :cl-user)
