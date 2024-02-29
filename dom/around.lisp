@@ -26,8 +26,8 @@
 ;;; Remove the parents of the set of matched elements from the DOM, leaving the matched elements in their place.
 ;;;   (jq:unwrap jqe)
 ;;;   (jq:unwrap jqe selector-string)
-(export '(unwrap))
-(defun unwrap (jse &optional (midagi "")) (@call (jse "unwrap") midagi))
+(export '([q].unwrap))
+(defun [q].unwrap (jse &optional (midagi "")) (@call (jse "unwrap") midagi))
 
 ;;; .wrap()
 ;;; Wrap an HTML structure around each element in the set of matched elements.
@@ -38,8 +38,8 @@
 ;;;          Type: Selector or htmlString or Element or jQuery
 ;;;          function
 ;;;          Type: Function( Integer index ) => String or jQuery
-(export '(jq::wrap))
-(defun wrap (jse wre) (@call (jse "wrap") wre))
+(export '(jq::[q].wrap))
+(defun [q].wrap (jse wre) (@call (jse "wrap") wre))
 
 ;;; .wrapAll()
 ;;; Wrap an HTML structure around all elements in the set of matched elements.
@@ -51,8 +51,8 @@
 ;;;          Type: Selector or htmlString or Element or jQuery
 ;;;          function
 ;;;          Type: Function( Integer index ) => String or jQuery
-(export '(jq::wrap-All))
-(defun wrap-All (jse wre) (@call (jse "wrapAll") wre))
+(export '(jq::[q].wrap-All))
+(defun [q].wrap-All (jse wre) (@call (jse "wrapAll") wre))
 
 ;;; .wrapInner()
 ;;; Wrap an HTML structure around the content of each element in the set of matched elements.
@@ -64,8 +64,8 @@
 ;;;          Type: Selector or htmlString or Element or jQuery
 ;;;          function
 ;;;          Type: Function( Integer index ) => String or jQuery
-(export '(jq::wrap-Inner))
-(defun wrap-Inner (jse wre) (@call (jse "wrapInner") wre))
+(export '(jq::[q].wrap-Inner))
+(defun [q].wrap-Inner (jse wre) (@call (jse "wrapInner") wre))
 
 
 (in-package :cl-user)
