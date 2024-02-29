@@ -80,7 +80,7 @@
 ;;;           A selector, element, array of elements, HTML string, or jQuery object
 ;;;           the matched set of elements will be inserted after the element(s) specified by this parameter.
 (export '(jq::[q].insert-after))
-(defun [q].insert-after (jse target) (@call (jse "insertAfter") content midagi))
+(defun [q].insert-after (jse target) (@call (jse "insertAfter") target))
 
 ;;; .insertBefore()
 ;;; Insert every element in the set of matched elements before the target.
@@ -93,7 +93,7 @@
 ;;;
 ;;; The .before() and .insertBefore() methods perform the same task.
 (export '(jq::[q].insert-before))
-(defun [q].insert-before (jse target) (@call (jse "insertBefore") content target))
+(defun [q].insert-before (jse target) (@call (jse "insertBefore") target))
 
 
 (in-package :cl-user)
