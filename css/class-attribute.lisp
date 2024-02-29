@@ -35,8 +35,8 @@
 ;;;               position of the element in the set and the existing class name(s)
 ;;;               as arguments. Within the function, this refers to the current element
 ;;;               in the set.
-(export '(add-class))
-(defun add-class (jq name) (@call (jq "addClass") name))
+(export '([q].add-class))
+(defun [q].add-class (jq name) (@call (jq "addClass") name))
 
 ;;; .hasClass()
 ;;; Determine whether any of the matched elements are assigned the given class.
@@ -53,8 +53,8 @@
 ;;;
 ;;; (jq:append (jq:$ "#result3")
 ;;;            (if (jq:hash-class (jq:$ "p") "dinosaur") "meet" "not meet"))
-(export '(has-class))
-(defun has-class (jq name) (@call (jq "hasClass") name))
+(export '([q].has-class))
+(defun [q].has-class (jq name) (@call (jq "hasClass") name))
 
 
 ;;; .removeClass()
@@ -64,8 +64,8 @@
 ;;;              A function returning one or more space-separated class names to be removed.
 ;;;              Receives the index position of the element in the set and the old class
 ;;;              value as arguments.
-(export '(remove-class))
-(defun remove-class (jq name) (@call (jq "removeClass") name))
+(export '([q].remove-class))
+(defun [q].remove-class (jq name) (@call (jq "removeClass") name))
 
 ;;; .toggleClass()
 ;;; Add or remove one or more classes from each element in the set of matched elements,
@@ -76,8 +76,8 @@
 ;;; (jq:toggle-class jqe class-name)
 ;;; (jq:toggle-class jqe class-name state)
 ;;; (jq:toggle-class jqe fn &optional state)
-(export '(toggle-class))
-(defun toggle-class (jq class-name-or-fn &optional (midagi "")) (@call (jq "toggleClass") class-name-or-fn))
+(export '([q].toggle-class))
+(defun [q].toggle-class (jq class-name-or-fn &optional (midagi "")) (@call (jq "toggleClass") class-name-or-fn))
 
 (in-package :cl-user)
 
