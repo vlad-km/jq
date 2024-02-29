@@ -39,18 +39,6 @@
 ;;; .dequeue()
 ;;; Execute the next function on the queue for the matched elements.
 
-;;; .fadeIn()
-;;; Display the matched elements by fading them to opaque.
-
-;;; .fadeOut()
-;;;Hide the matched elements by fading them to transparent.
-
-;;; .fadeTo()
-;;; Adjust the opacity of the matched elements.
-
-;;; .fadeToggle()
-;;; Display or hide the matched elements by animating their opacity.
-
 ;;; .finish()
 ;;; Stop the currently-running animation, remove all queued animations, and complete all animations for the matched elements.
 
