@@ -102,15 +102,6 @@
 
 
 
-;;; .slideDown()
-;;; Display the matched elements with a sliding motion.
-
-;;; .slideToggle()
-;;; Display or hide the matched elements with a sliding motion.
-
-;;; .slideUp()
-;;; Hide the matched elements with a sliding motion.
-
 ;;; .stop()
 ;;; Stop the currently-running animation on the matched elements.
 

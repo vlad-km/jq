@@ -89,6 +89,9 @@
 ;;;  and 600 milliseconds, respectively. 
 ;;;  If any other string is supplied, or if the duration parameter is omitted, 
 ;;;  the default duration of 400 milliseconds is used.
+(export '([jq].fade-out))
+(defun [jq].fade-out (jq )
+)
 
 
 

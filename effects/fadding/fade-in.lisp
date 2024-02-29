@@ -78,6 +78,9 @@
 ;;;                                  A function to call once the animation is complete, called once 
 ;;;                                  per matched element.
 
+(export '([jq].fade-in))
+(defun [jq].fade-in (jq )
+)
 
 
 ;;; EOF

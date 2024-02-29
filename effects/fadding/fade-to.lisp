@@ -16,6 +16,10 @@
               \)
 |#
 
+(export '([jq].fade-to))
+(defun [jq].fade-to (jq )
+)
+
 
 
 ;;; EOF

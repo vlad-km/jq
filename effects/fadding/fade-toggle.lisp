@@ -16,6 +16,9 @@
               \)
 |#
 
+(export '([jq].fade-toggle))
+(defun [jq].fade-toggle (jq )
+)
 
 
 ;;; EOF
