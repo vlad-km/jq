@@ -45,8 +45,8 @@
 ;;;         insert after each element in the set of matched elements. Receives the index position of the
 ;;;         element in the set and the old HTML value of the element as arguments. Within the function,
 ;;;         this refers to the current element in the set.
-(export '(jq::after))
-(defun after (jse content &optional (midagi "")) (@call (jse "after") content midagi))
+(export '(jq::[q].after))
+(defun [q].after (jse content &optional (midagi "")) (@call (jse "after") content midagi))
 
 ;;; .before()
 ;;; Insert content, specified by the parameter, before each element in the set of matched elements.
@@ -69,8 +69,8 @@
 ;;;        insert before each element in the set of matched elements. Receives the index position
 ;;;        of the element in the set and the old HTML value of the element as arguments.
 ;;;        Within the function, this refers to the current element in the set.
-(export '(jq::before))
-(defun before (jse content &optional (midagi "")) (@call (jse "before") content midagi))
+(export '(jq::[q].before))
+(defun [q].before (jse content &optional (midagi "")) (@call (jse "before") content midagi))
 
 ;;; .insertAfter()
 ;;; Insert every element in the set of matched elements after the target.
@@ -79,8 +79,8 @@
 ;;;           Type: Selector or htmlString or Element or Array or jQuery
 ;;;           A selector, element, array of elements, HTML string, or jQuery object
 ;;;           the matched set of elements will be inserted after the element(s) specified by this parameter.
-(export '(jq::insert-after))
-(defun insert-after (jse target) (@call (jse "insertAfter") content midagi))
+(export '(jq::[q].insert-after))
+(defun [q].insert-after (jse target) (@call (jse "insertAfter") content midagi))
 
 ;;; .insertBefore()
 ;;; Insert every element in the set of matched elements before the target.
@@ -92,8 +92,8 @@
 ;;;          set of elements will be inserted before the element(s) specified by this parameter.
 ;;;
 ;;; The .before() and .insertBefore() methods perform the same task.
-(export '(jq::insert-before))
-(defun insert-before (jse target) (@call (jse "insertBefore") content target))
+(export '(jq::[q].insert-before))
+(defun [q].insert-before (jse target) (@call (jse "insertBefore") content target))
 
 
 (in-package :cl-user)

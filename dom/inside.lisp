@@ -25,13 +25,13 @@
 
 ;;; .append()
 ;;; Insert content, specified by the parameter, to the end of each element in the set of matched elements.
-(export '(jq::append))
-(defun append (jse content) (@call (jse "append") content))
+(export '(jq::[q].append))
+(defun [q].append (jse content) (@call (jse "append") content))
 
 ;;; .appendTo()
 ;;; Insert every element in the set of matched elements to the end of the target.
-(export '(jq::append-to))
-(defun append-to (jse content) (@call (jse "appendTo") content))
+(export '(jq::[q].append-to))
+(defun [q].append-to (jse content) (@call (jse "appendTo") content))
 
 ;;; jq:html
 ;;; (jq:html jqe)
@@ -43,8 +43,8 @@
 ;;;               A function returning the HTML content to set.
 ;;;                => (fn index old-html)
 ;;;                <= html-string
-(export '(jq::html))
-(defun html (jse &optional (setter "")) (@call (jse "appendTo") setter))
+(export '(jq::[q].html))
+(defun [q].html (jse &optional (setter "")) (@call (jse "appendTo") setter))
 
 ;;; .prepend()
 ;;; Insert content, specified by the parameter, to the beginning of each element in the set of matched elements.
@@ -56,8 +56,8 @@
 ;;;           One or more additional DOM elements, text nodes, arrays of elements
 ;;;           and text nodes, HTML strings, or jQuery objects to insert at the beginning
 ;;;           of each element in the set of matched elements.
-(export '(jq::prepend))
-(defun prepend (jse content &optional (midagi "")) (@call (jse "appendTo") content midagi))
+(export '(jq::[q].prepend))
+(defun [q].prepend (jse content &optional (midagi "")) (@call (jse "appendTo") content midagi))
 
 ;;; .prependTo()
 ;;; Insert every element in the set of matched elements to the beginning of the target.
@@ -65,8 +65,8 @@
 ;;;         A selector, element, HTML string, array of elements, or jQuery object
 ;;;         the matched set of elements will be inserted at the beginning of the
 ;;;         element(s) specified by this parameter.
-(export '(jq::prepend-to))
-(defun prepend-to (jse target) (@call (jse "prependTo") target))
+(export '(jq::[q].prepend-to))
+(defun [q].prepend-to (jse target) (@call (jse "prependTo") target))
 
 ;;; .text()
 ;;; Get the combined text contents of each element in the set of matched elements, including their
@@ -75,8 +75,8 @@
 ;;;           The text to set as the content of each matched element.
 ;;;           When Number or Boolean is supplied, it will be converted
 ;;;           to a String representation.
-(export '(jq::text))
-(defun text (jse &optional (content "")) (@call (jse "text") target))
+(export '(jq::[q].text))
+(defun [q].text (jse &optional (content "")) (@call (jse "text") target))
 
 
 (in-package :cl-user)

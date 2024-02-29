@@ -30,8 +30,8 @@
 ;;;              A selector string, jQuery object, DOM element, or array of elements
 ;;;              indicating which element(s) to replace.
 ;;;   The .replaceAll() method is similar to .replaceWith(), but with the source and target reversed.
-(export '(jq::replace-all))
-(defun replace-all (jq target) (@call (jq "replaceAll") target))
+(export '(jq::[q].replace-all))
+(defun [q].replace-all (jq target) (@call (jq "replaceAll") target))
 
 ;;; .replaceWith()
 ;;; Replace each element in the set of matched elements with the provided new content and return
@@ -45,8 +45,8 @@
 ;;;               Type: Function()
 ;;;               A function that returns content with which to replace the set of matched elements.
 ;;;  The .replaceWith() method removes content from the DOM and inserts new content in its place with a single call.
-(export '(jq::replace-with))
-(defun replace-with (jq content) (@call (jq "replaceAll") content))
+(export '(jq::[q].replace-with))
+(defun [q].replace-with (jq content) (@call (jq "replaceAll") content))
 
 (in-package :cl-user)
 

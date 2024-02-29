@@ -30,13 +30,13 @@
 ;;;       A selector expression that filters the set of matched elements to be removed.
 ;;; The .detach() method is the same as .remove(), except that .detach() keeps all jQuery data associated
 ;;; with the removed elements. This method is useful when removed elements are to be reinserted into the DOM at a later time.
-(export '(jq::detach))
-(defun detach (jse &optional selector) (@call (jse "detach") selector))
+(export '(jq::[q].detach))
+(defun [q].detach (jse &optional selector) (@call (jse "detach") selector))
 
 ;;; .empty()
 ;;; Remove all child nodes of the set of matched elements from the DOM.
-(export '(jq::empty))
-(defun empty (jse) (@call (jse "empty")))
+(export '(jq::[q].empty))
+(defun [q].empty (jse) (@call (jse "empty")))
 
 ;;; .remove()
 ;;; Remove the set of matched elements from the DOM.
@@ -49,8 +49,8 @@
 ;;; In addition to the elements themselves, all bound events and jQuery data associated with
 ;;; the elements are removed. To remove the elements without removing data and events,
 ;;; use .detach() instead.
-(export '(jq::remove))
-(defun remove (jse &optional (selector"")) (@call (jse "remove") selector)
+(export '(jq::[q].remove))
+(defun [q].remove (jse &optional (selector"")) (@call (jse "remove") selector)
 
 (in-package :cl-user)
 

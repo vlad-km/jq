@@ -45,8 +45,8 @@
 ;;;
 ;;; (jq:text (jq:$ "div")
 ;;;          (if (jq:attr (jq:$ "em") "title") "true" "false"))
-(export '(jq::attr))
-(defun attr (jqe attrname &optional (value "")) (@call (jse "attr") attrname value))
+(export '(jq::[q].attr))
+(defun [q].attr (jqe attrname &optional (value "")) (@call (jse "attr") attrname value))
 
 ;;; jq:prop
 ;;; Get the value of a property for the first element in the set of matched elements
@@ -86,20 +86,20 @@
 ;;;                                 ".prop( \"checked\" ): <b>" + (jq:prop *input "checked" )  "</b><br>"
 ;;;                                 ".is( \":checked\" ): <b>" + (jq:is *input ":checked" )  "</b>" )))))
 ;;;
-(export '(jq::prop))
-(defun prop (jqe property &optional (midagi "")) (@call (jse "attr") property midagi))
+(export '(jq::[q].prop))
+(defun [q].prop (jqe property &optional (midagi "")) (@call (jse "attr") property midagi))
 
 ;;; jq:removeAttr
 ;;; Remove an attribute from each element in the set of matched elements
 ;;; (jq:remove-attr jqe attr-name)
-(export '(jq::remove-attr))
-(defun remove-attr (jqe attr-name) (@call (jse "removeAttr") attr-name))
+(export '(jq::[q].remove-attr))
+(defun [q].remove-attr (jqe attr-name) (@call (jse "removeAttr") attr-name))
 
 ;;; jq:removeProp
 ;;; Remove a property for the set of matched elements
 ;;; (jq:remove-prop jqe prop-name)
-(export '(jq::remove-prop))
-(defun remove-prop (jqe prop-name) (@call (jse "removeProp") prop-name))
+(export '(jq::[q].remove-prop))
+(defun [q].remove-prop (jqe prop-name) (@call (jse "removeProp") prop-name))
 
 ;;; jqe:val
 ;;; Get the current value of the first element in the set of matched elements
@@ -108,8 +108,8 @@
 ;;; (jq:val jqe)
 ;;; (jq:val jqe value)
 ;;; (jq:val jqe function)
-(export '(jq::val))
-(defun val (jqe &optional (midagi "")) (@call (jse "removeProp") midagi))
+(export '(jq::[q].val))
+(defun [q].val (jqe &optional (midagi "")) (@call (jse "removeProp") midagi))
 
 (in-package :cl-user)
 
