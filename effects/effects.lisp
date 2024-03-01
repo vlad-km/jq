@@ -153,8 +153,35 @@
 
 ;;; .queue()
 ;;; Show or manipulate the queue of functions to be executed on the matched elements.
+;;; .queue( [queueName ] )
+;;;       queueName   Type: String
+;;;                   A string containing the name of the queue.
+;;;                   Defaults to fx, the standard effects queue.
+;;;
+;;; .queue( [queueName ], newQueue )
+;;;       queueName   Type: String
+;;;                   A string containing the name of the queue.
+;;;                   Defaults to fx, the standard effects queue.
+;;;       newQueue    Type: Array
+;;;                   An array of functions to replace the current queue contents.
+;;;
+;;; .queue( [queueName ], callback )
+;;;      queueName    Type: String
+;;;                   A string containing the name of the queue.
+;;;                   Defaults to fx, the standard effects queue.
+;;;     callback      Type: Function( Function next() )
+;;;                   The new function to add to the queue, with a function
+;;;                   to call that will dequeue the next item.
+;;;
+;;; Every element can have one to many queues of functions attached to it by jQuery.
+;;; In most applications, only one queue (called fx) is used. Queues allow a sequence of actions
+;;; to be called on an element asynchronously, without halting program execution.
+(export '([q].queue))
+(defun [q].queue (jq &rest midagi)
+  (let ((f (@call (jq "queue" "bind") jq "fx")))
+    (apply f midagi)))
 
-
+;;; todo: separete file
 ;;; (jq:show jqe)
 ;;; Display the matched elements.
 ;;; .show()
@@ -164,13 +191,57 @@
 ;;;         Type: Number or String
 ;;;         A string or number determining how long the animation will run.
 ;;;
-;;; (jq:show jqe "fast") or "slow"
-;;;
-(export '(jq::[q].show))
-(defun [q].show (jqe &optional (duration "")) (@call (jqe "show") dureation))
+;;; (jq:show jqe "fast"  or "slow")
+;;; (export '(jq::[q].show))
+;;; (defun [q].show (jqe &optional (duration "")) (@call (jqe "show") dureation))
+
 
 ;;; .stop()
 ;;; Stop the currently-running animation on the matched elements.
+;;; .stop( [clearQueue ] [, jumpToEnd ] )
+;;; clearQueue    (default: false)
+;;;               Type: Boolean
+;;;               A Boolean indicating whether to remove queued animation as well.
+;;;               Defaults to false.
+;;; jumpToEnd     (default: false)
+;;;               Type: Boolean
+;;;               A Boolean indicating whether to complete the current animation
+;;;               immediately. Defaults to false.
+;;;
+;;; .stop( [queue ] [, clearQueue ] [, jumpToEnd ] )
+;;;        queue      Type: String
+;;;                   The name of the queue in which to stop animations.
+;;;        clearQueue (default: false)
+;;;                   Type: Boolean
+;;;                   A Boolean indicating whether to remove queued animation as well.
+;;;                   Defaults to false.
+;;;       jumpToEnd   (default: false)
+;;;                   Type: Boolean
+;;;                   A Boolean indicating whether to complete the current animation
+;;;                   immediately. Defaults to false.
+;;;
+;;; When .stop() is called on an element, the currently-running animation (if any) is
+;;; immediately stopped. If, for instance, an element is being hidden with .slideUp() when .stop()
+;;; is called, the element will now still be displayed, but will be a fraction of its previous height.
+;;; Callback functions are not called.
+;;;
+;;; If more than one animation method is called on the same element, the later animations
+;;; are placed in the effects queue for the element. These animations will not begin until the
+;;; first one completes. When .stop() is called, the next animation in the queue begins immediately.
+;;; If the clearQueue parameter is provided with a value of true, then the rest of the animations
+;;; in the queue are removed and never run.
+;;;
+;;; If the jumpToEnd argument is provided with a value of true, the current animation stops,
+;;; but the element is immediately given its target values for each CSS property. In our above
+;;; .slideUp() example, the element would be immediately hidden. The callback function is then
+;;; immediately called, if provided.
+;;;
+;;; As of jQuery 1.7, if the first argument is provided as a string, only the animations
+;;; in the queue represented by that string will be stopped.
+(export '(jq:[q].stop))
+(defun [q].stop (jq &rest midagi)
+  (let ((f (@call (jq "stop" "bind") )))
+    (apply f midagi)))
 
 ;;; (jq:toggle jqe)
 ;;; Display or hide the matched elements.
