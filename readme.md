@@ -21,7 +21,8 @@ So: JS-function _`.next`_ this is a lisp name  _`jq:[q].next`_
 
 
 ## Category: Class Attribute
-### Location: 
+> Location: 
+
 
 .addClass()
 Adds the specified class(es) to each element in the set of matched elements.
