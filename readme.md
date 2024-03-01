@@ -38,7 +38,8 @@ Add or remove one or more classes from each element in the set of matched elemen
 
 
 ## Category: Dimensions
-### Location: 
+> Location: 
+
 
 .height()
 Get the current computed height for the first element in the set of matched elements or set the height of every matched element.
@@ -61,7 +62,8 @@ Get the current computed width for the first element in the set of matched eleme
 
 
 ## Category: DOM Insertion, Around
-### Location: 
+> Location: 
+
 
 .unwrap()
 Remove the parents of the set of matched elements from the DOM, leaving the matched elements in their place.
@@ -77,7 +79,8 @@ Wrap an HTML structure around the content of each element in the set of matched 
 
 
 ## Category: DOM Insertion, Inside
-### Location: 
+> Location: 
+
 
 .append()
 Insert content, specified by the parameter, to the end of each element in the set of matched elements.
@@ -100,7 +103,7 @@ Get the combined text contents of each element in the set of matched elements, i
 
 
 ## Category: DOM Insertion, Outside
-### Location: 
+> Location: 
 
 .after()
 Insert content, specified by the parameter, after each element in the set of matched elements.
@@ -115,7 +118,8 @@ Insert every element in the set of matched elements after the target.
 Insert every element in the set of matched elements before the target.
 
 ## Category: DOM Removal
-### Location: 
+> Location: 
+
 
 .detach()
 Remove the set of matched elements from the DOM.
@@ -128,7 +132,8 @@ Remove the set of matched elements from the DOM.
 
 
 ## Category: DOM Replacement
-### Location: 
+> Location: 
+
 
 .replaceAll()
 Replace each target element with the set of matched elements.
@@ -138,7 +143,8 @@ Replace each element in the set of matched elements with the provided new conten
 
 
 ## Category: General Attributes
-### Location: 
+> Location: 
+
 
 .attr()
 Get the value of an attribute for the first element in the set of matched elements or set one or more attributes for every matched element.
@@ -157,7 +163,7 @@ Get the current value of the first element in the set of matched elements or set
 
 
 ## Category: Filtering
-### Location: 
+> Location: 
 
 .eq()
 Reduce the set of matched elements to the one at the specified index.
@@ -195,6 +201,8 @@ Reduce the set of matched elements to a subset specified by a range of indices.
 
 
 ## Category: Miscellaneous Traversing
+> Location: 
+
 
 .add()
 Create a new jQuery object with elements added to the set of matched elements.
@@ -210,7 +218,8 @@ Get the children of each element in the set of matched elements, including text 
 End the most recent filtering operation in the current chain and return the set of matched elements to its previous state.
 
 ## Category: Tree Traversal
-### Location:
+> Location: 
+
 
 .children()
 Get the children of each element in the set of matched elements, optionally filtered by a selector.
