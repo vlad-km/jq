@@ -50,7 +50,7 @@
 ;;; the elements are removed. To remove the elements without removing data and events,
 ;;; use .detach() instead.
 (export '(jq::[q].remove))
-(defun [q].remove (jse &optional (selector"")) (@call (jse "remove") selector)
+(defun [q].remove (jse &optional (selector"")) (@call (jse "remove") selector))
 
 (in-package :cl-user)
 
