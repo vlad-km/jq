@@ -197,7 +197,6 @@ Reduce the set of matched elements to the final one in the set.
 .map()
 Pass each element in the current matched set through a function, producing a new jQuery object containing the return values.
 
-Also in: Traversing > Miscellaneous Traversing
 .not()
 Remove elements from the set of matched elements.
 
@@ -249,7 +248,6 @@ Get all following siblings of each element in the set of matched elements, optio
 .nextUntil()
 Get all following siblings of each element up to but not including the element matched by the selector, DOM node, or jQuery object passed.
 
-Also in: Offset
 .offsetParent()
 Get the closest ancestor element that is positioned.
 
