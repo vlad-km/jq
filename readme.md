@@ -336,7 +336,7 @@ _________________________________
 
 ## Category: Widgets
 Widgets are feature-rich, stateful plugins that have a full life-cycle, along with methods and events. Check out the widget factory documentation for more details.
->Location: ui/widgets
+>Location: ui/
 
 ### Accordion Widget [-]
 Convert a pair of headers and content panels into an accordion.
@@ -360,6 +360,8 @@ Themeable set of input widgets.
 Select a date from a popup or inline calendar
 
 ### Dialog Widget [-]
+>> Location: dialog.lisp
+
 Open content in an interactive overlay.
 
 ### Form Reset Mixin [-]
@@ -387,7 +389,7 @@ Drag a handle to select a numeric value.
 Enhance a text input for entering numeric values, with up/down buttons and arrow key handling.
 
 ### Tabs Widget [+]
->Location tabs.lisp
+>>Location: tabs.lisp
 
 A single content area with multiple panels, each associated with a header in a list.
 
@@ -397,7 +399,7 @@ Customizable, themeable tooltips, replacing native tooltips.
 _________________________________
 
 ## Category: Interactions
-> Location: _ui/iteraction_
+> Location: ui/
 
 jQuery UI provides a set of mouse-based interactions as building blocks for rich interfaces and complex widgets.
 
@@ -425,9 +427,10 @@ Use the mouse to select elements, individually or in a group.
 ### Sortable Widget [-]
 Reorder elements in a list or grid using the mouse.
 
+_________________________________
 
 
 
-### Copyright
+## Copyright
 Copyright © 2017,2024 Vladimir Mezentsev
 
