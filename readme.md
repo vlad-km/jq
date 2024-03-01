@@ -20,6 +20,14 @@ In the release all files have the following names:
 So: JS-function _`.next`_ this is a lisp name  _`(jq:[q].next)`_ or _`([q].next)`_
 
 
+## Disclaim
+Сompiles only in the environment _`JSCL (Moren edition) Electron`_
+
+JQuiery version _`1.8.3`_
+
+All Function comments are from https://api.jquery.com
+
+
 ## Category: Class Attribute
 > Location: 
 
