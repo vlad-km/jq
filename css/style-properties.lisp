@@ -50,7 +50,7 @@
 ;;;              A function returning the value to set. this is the current element.
 ;;;              Receives the index position of the element in the set and the old
 ;;;              value as arguments.
-(export '([q]:css))
+(export '([q].css))
 (defun [q].css (jqe props &optional (midagi "")) (@call (jqe "css") props midagi))
 
 
