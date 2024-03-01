@@ -21,9 +21,13 @@
 (defmacro @call ((obj &rest methods) &body args)
   `((jscl::oget ,obj ,@methods) ,@args))
 
+(defmacro @bind ((obj &rest methods) &body args)
+  `((jscl::oget ,obj ,@methods "bind") ,obj ,@args))
+
 (defmacro @get (obj &rest pathes)
   `(jscl::oget ,obj ,@pathes ))
 
+;;; jQuery
 (export '($))
 (defun $ (a &optional (o "")) (#j:$ a o))
 
