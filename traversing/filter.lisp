@@ -200,5 +200,29 @@
 (defun [q].slice (jq start &optional (end "")) (@call (jq "slice") start end))
 
 
+;;; .map()
+;;; Description: Translate all items in an array or object to new array of items.
+;;;
+;;;jQuery.map( array, callback )
+;;;  array    Type: ArrayLikeObject
+;;;           The Array or an Array-like object to translate.
+;;; callback  Type: Function( Object elementOfArray, Integer indexInArray ) => Object
+;;;           The function to process each item against. The first argument to the
+;;;           function is the array item, the second argument is the index in array
+;;;           The function can return any value. A returned array will be flattened
+;;;           into the resulting array. Within the function, this refers to the
+;;;           global (window) object.
+;;;
+;;; jQuery.map( object, callback )
+;;;    object    Type: Object
+;;;              The non-Array-like Object to translate.
+;;;    callback  Type: Function( Object propertyOfObject, String key ) => Object
+;;;              The function to process each item against. The first argument to the function
+;;;              is the value; the second argument is the key of the object property. The
+;;;              function can return any value to add to the array.
+;;;              A returned array will be flattened into the resulting array.
+;;;              Within the function, this refers to the global (window) object.
+;;;
+;;; If you wish to process a jQuery object — for example, $('div').map( callback ) — use .map() instead.
 
 ;;; EOF
