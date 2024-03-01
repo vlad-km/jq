@@ -263,52 +263,68 @@ Get the children of each element in the set of matched elements, including text 
 End the most recent filtering operation in the current chain and return the set of matched elements to its previous state.
 
 ## Category: Tree Traversal
-> Location: 
+> Location: traversing/travers.lisp 
 
 
 #### .children() [+]
 Get the children of each element in the set of matched elements, optionally filtered by a selector.
 
-#### .closest() [+]
+#### .closest() [-]
 For each element in the set, get the first element that matches the selector by testing the element itself and traversing up through its ancestors in the DOM tree.
 
 
-#### .find() [+]
+#### .find() [-]
 Get the descendants of each element in the current set of matched elements, filtered by a selector, jQuery object, or element.
 > Location:
 
-#### .next() [+]
+#### .next() [-]
 Get the immediately following sibling of each element in the set of matched elements. If a selector is provided, it retrieves the next sibling only if it matches that selector.
 
-#### .nextAll() [+]
+#### .nextAll() [-]
 Get all following siblings of each element in the set of matched elements, optionally filtered by a selector.
 
-#### .nextUntil() [+]
+#### .nextUntil() [-]
 Get all following siblings of each element up to but not including the element matched by the selector, DOM node, or jQuery object passed.
 
-#### .offsetParent() [+]
+#### .offsetParent() [-]
 Get the closest ancestor element that is positioned.
 
-#### .parent() [+]
+#### .parent() [-]
 Get the parent of each element in the current set of matched elements, optionally filtered by a selector.
 
-#### .parents() [+]
+#### .parents() [-]
 Get the ancestors of each element in the current set of matched elements, optionally filtered by a selector.
 
-#### .parentsUntil() [+]
+#### .parentsUntil() [-]
 Get the ancestors of each element in the current set of matched elements, up to but not including the element matched by the selector, DOM node, or jQuery object.
 
-#### .prev() [+]
+#### .prev() [-]
 Get the immediately preceding sibling of each element in the set of matched elements. If a selector is provided, it retrieves the previous sibling only if it matches that selector.
 
-#### .prevAll() [+]
+#### .prevAll() [-]
 Get all preceding siblings of each element in the set of matched elements, optionally filtered by a selector, in the reverse document order.
 
-#### .prevUntil() [+]
+#### .prevUntil() [-]
 Get all preceding siblings of each element up to but not including the element matched by the selector, DOM node, or jQuery object.
 
-#### .siblings() [+]
+#### .siblings() [-]
 Get the siblings of each element in the set of matched elements, optionally filtered by a selector.
+
+## Category: Fading
+> Location: efects/fadding 
+
+### .fadeIn() [-]
+Display the matched elements by fading them to opaque.
+
+### .fadeOut() [-]
+Hide the matched elements by fading them to transparent.
+
+### .fadeTo() [-]
+Adjust the opacity of the matched elements.
+
+### .fadeToggle() [-]
+Display or hide the matched elements by animating their opacity.
+
 
 
 
