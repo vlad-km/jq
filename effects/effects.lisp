@@ -178,7 +178,7 @@
 ;;; to be called on an element asynchronously, without halting program execution.
 (export '([q].queue))
 (defun [q].queue (jq &rest midagi)
-  (let ((f (@call (jq "queue" "bind") jq "fx")))
+  (let ((f (@bind (jq "queue") jq "fx")))
     (apply f midagi)))
 
 ;;; todo: separete file
@@ -240,7 +240,7 @@
 ;;; in the queue represented by that string will be stopped.
 (export '([q].stop))
 (defun [q].stop (jq &rest midagi)
-  (let ((f (@call (jq "stop" "bind") )))
+  (let ((f (@bind (jq "stop") jq)))
     (apply f midagi)))
 
 ;;; todo: separate file
