@@ -52,8 +52,8 @@
 ;;; With .appendTo(), on the other hand, the content precedes the method, either as a selector
 ;;; expression or as markup created on the fly, and it is inserted into the target container.
 (export '(jq::[q].append))
-(defun [q].append (jse content &rest others)
-  (let ((f (@call (jse "append" "bind") content)))
+(defun [q].append (jq content &rest others)
+  (let ((f (@bind (jq "append") jq content)))
     (apply f others)))
 
 ;;; .appendTo()
@@ -71,7 +71,7 @@
 ;;; With .appendTo(), on the other hand, the content precedes the method, either as a selector expression
 ;;; or as markup created on the fly, and it is inserted into the target container.
 (export '(jq::[q].append-to))
-(defun [q].append-to (jse target) (@call (jse "appendTo") target))
+(defun [q].append-to (jq target) (@call (jq "appendTo") target))
 
 ;;; jq:html
 ;;; (jq:html jqe)
@@ -84,7 +84,7 @@
 ;;;                => (fn index old-html)
 ;;;                <= html-string
 (export '(jq::[q].html))
-(defun [q].html (jse &optional (setter "")) (@call (jse "appendTo") setter))
+(defun [q].html (jq &optional (setter "")) (@call (jq "appendTo") setter))
 
 ;;; .prepend()
 ;;; Insert content, specified by the parameter, to the beginning of each element in the set of matched elements.
@@ -109,8 +109,8 @@
 ;;; The .prepend() method inserts the specified content as the first child of each element in the jQuery
 ;;; collection (To insert it as the last child, use .append()).
 (export '(jq::[q].prepend))
-(defun [q].prepend (jse content &rest midagi)
-  (let ((f (@call  (jse "prepend" "bind") jse content)))
+(defun [q].prepend (jq content &rest midagi)
+  (let ((f (@bind  (jq "prepend") jq content)))
     (apply f midagi)))
 
 ;;; .prependTo()
@@ -120,7 +120,7 @@
 ;;;         the matched set of elements will be inserted at the beginning of the
 ;;;         element(s) specified by this parameter.
 (export '(jq::[q].prepend-to))
-(defun [q].prepend-to (jse target) (@call (jse "prependTo") target))
+(defun [q].prepend-to (jq target) (@call (jq "prependTo") target))
 
 ;;; .text()
 ;;; Get the combined text contents of each element in the set of matched elements, including their
@@ -136,7 +136,7 @@
 ;;;                 the index position of the element in the set and the
 ;;;                 old text value as arguments.
 (export '(jq::[q].text))
-(defun [q].text (jse &optional (content "")) (@call (jse "text") content))
+(defun [q].text (jq &optional (content "")) (@call (jq "text") content))
 
 
 (in-package :cl-user)

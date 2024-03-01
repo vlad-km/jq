@@ -66,7 +66,7 @@
 
 (export '([q].off))
 (defun [q].off (jq &rest midagi)
-  (let ((f (@call (jq "off" "bind") jq)))
+  (let ((f (@bind (jq "off") jq)))
     (apply f midagi)))
 
 ;;; .on()
@@ -74,7 +74,7 @@
 ;;;
 ;;;
 (export '([q].on))
-(defun [q].on (jse event handler) (@call (jq "on") handler ))
+(defun [q].on (jq event handler) (@call (jq "on") handler ))
 
 ;;; .one()
 ;;; Attach a handler to an event for the elements. The handler is executed at most once per element per event type.
