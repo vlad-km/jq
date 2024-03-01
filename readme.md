@@ -147,7 +147,7 @@ Insert every element in the set of matched elements to the beginning of the targ
 
 #### .text() [+]
 Get the combined text contents of each element in the set of matched elements, including their descendants, or set the text contents of the matched elements.
-
+_________________________________
 
 ## Category: DOM Insertion, Outside
 > Location: 
@@ -163,10 +163,10 @@ Insert every element in the set of matched elements after the target.
 
 #### .insertBefore() [+]
 Insert every element in the set of matched elements before the target.
+_________________________________
 
 ## Category: DOM Removal
 > Location: 
-
 
 #### .detach() [+]
 Remove the set of matched elements from the DOM.
@@ -176,17 +176,18 @@ Remove all child nodes of the set of matched elements from the DOM.
 
 #### .remove() [+]
 Remove the set of matched elements from the DOM.
-
+_________________________________
 
 ## Category: DOM Replacement
 > Location: 
-
 
 #### .replaceAll() [+]
 Replace each target element with the set of matched elements.
 
 #### .replaceWith() [+]
 Replace each element in the set of matched elements with the provided new content and return the set of elements that was removed.
+
+_________________________________
 
 
 ## Category: General Attributes
@@ -207,6 +208,8 @@ Remove a property for the set of matched elements.
 
 #### .val() [+]
 Get the current value of the first element in the set of matched elements or set the value of every matched element
+
+_________________________________
 
 
 ## Category: Filtering
@@ -245,6 +248,8 @@ Reduce the set of matched elements to the odd ones in the set, numbered from zer
 #### .slice() [+]
 Reduce the set of matched elements to a subset specified by a range of indices.
 
+_________________________________
+
 
 ## Category: Miscellaneous Traversing
 > Location: 
@@ -261,6 +266,9 @@ Get the children of each element in the set of matched elements, including text 
 
 #### .end() [+]
 End the most recent filtering operation in the current chain and return the set of matched elements to its previous state.
+
+_________________________________
+
 
 ## Category: Tree Traversal
 > Location: traversing/travers.lisp 
@@ -324,7 +332,7 @@ Adjust the opacity of the matched elements.
 
 ### .fadeToggle() [-]
 Display or hide the matched elements by animating their opacity.
-
+_________________________________
 
 ## Category: Widgets
 Widgets are feature-rich, stateful plugins that have a full life-cycle, along with methods and events. Check out the widget factory documentation for more details.
@@ -390,14 +398,17 @@ _________________________________
 
 ## Category: Interactions
 > Location: _ui/iteraction_
+
 jQuery UI provides a set of mouse-based interactions as building blocks for rich interfaces and complex widgets.
 
 ### Draggable Widget [+]
 >> Location: draggable.lisp
+
 Allow elements to be moved using the mouse.
 
 ### Droppable Widget [+]
 >> Location: droppable.lisp
+
 Create targets for draggable elements.
 
 ### Mouse Interaction [-]
@@ -405,6 +416,7 @@ The base interaction layer.
 
 ### Resizable Widget [+]
 >> Location: resizable.lisp
+
 Change the size of an element using the mouse.
 
 ### Selectable Widget [-]
