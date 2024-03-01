@@ -17,7 +17,7 @@ In the release all files have the following names:
 <function-name> ::=  {dot} function-name as used at JQuery
 ```
 
-So: JS-function _`.next`_ this is a lisp name  _`jq:[q].next`_
+So: JS-function _`.next`_ this is a lisp name  _`(jq:[q].next)`_ or _`([q].next)`_
 
 
 ## Category: Class Attribute
