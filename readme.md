@@ -326,6 +326,94 @@ Adjust the opacity of the matched elements.
 Display or hide the matched elements by animating their opacity.
 
 
+## Category: Widgets
+Widgets are feature-rich, stateful plugins that have a full life-cycle, along with methods and events. Check out the widget factory documentation for more details.
+>Location: ui/widgets
+
+### Accordion Widget [-]
+Convert a pair of headers and content panels into an accordion.
+
+### Autocomplete Widget [-]
+Autocomplete enables users to quickly find and select from a pre-populated list of values as they type, leveraging searching and filtering.
+
+### Button Widget [-]
+Themeable buttons.
+
+### Buttonset Widget [-]
+Themeable button sets.
+
+### Checkboxradio Widget [-]
+Converts inputs of type radio and checkbox to themeable buttons.
+
+### Controlgroup Widget [-]
+Themeable set of input widgets.
+
+### Datepicker Widget [-]
+Select a date from a popup or inline calendar
+
+### Dialog Widget [-]
+Open content in an interactive overlay.
+
+### Form Reset Mixin [-]
+A mixin to call refresh() on an input widget when the parent form gets reset.
+
+### Widget Factory [-]
+Create stateful jQuery plugins using the same abstraction as all jQuery UI widgets.
+
+### Widget Plugin Bridge [-]
+Part of the jQuery Widget Factory is the jQuery.widget.bridge() method. This acts as the middleman between the object created by $.widget() and the jQuery API.
+
+### Menu Widget [-]
+Themeable menu with mouse and keyboard interactions for navigation.
+
+### Progressbar Widget [-]
+Display status of a determinate or indeterminate process.
+
+### Selectmenu Widget [-]
+Duplicates and extends the functionality of a native HTML select element to overcome the limitations of the native control.
+
+### Slider Widget [-]
+Drag a handle to select a numeric value.
+
+### Spinner Widget [-]
+Enhance a text input for entering numeric values, with up/down buttons and arrow key handling.
+
+### Tabs Widget [+]
+>Location tabs.lisp
+
+A single content area with multiple panels, each associated with a header in a list.
+
+### Tooltip Widget [-]
+Customizable, themeable tooltips, replacing native tooltips.
+
+_________________________________
+
+## Category: Interactions
+> Location: _ui/iteraction_
+jQuery UI provides a set of mouse-based interactions as building blocks for rich interfaces and complex widgets.
+
+### Draggable Widget [+]
+>> Location: draggable.lisp
+Allow elements to be moved using the mouse.
+
+### Droppable Widget [+]
+>> Location: droppable.lisp
+Create targets for draggable elements.
+
+### Mouse Interaction [-]
+The base interaction layer.
+
+### Resizable Widget [+]
+>> Location: resizable.lisp
+Change the size of an element using the mouse.
+
+### Selectable Widget [-]
+Use the mouse to select elements, individually or in a group.
+
+### Sortable Widget [-]
+Reorder elements in a list or grid using the mouse.
+
+
 
 
 ### Copyright
