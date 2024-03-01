@@ -135,7 +135,7 @@
 ;;; including zero elements.
 (export '([q].animate))
 (defun [q].animate (jq props &rest others)
-  (let ((f (@get js "animate" "bind") jq props))
+  (let ((f (@call (js "animate" "bind") jq props)))
     (apply f others)))
 
 
