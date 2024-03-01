@@ -96,7 +96,7 @@
 ;;; Get the current vertical position of the scroll bar for the first element in the set of matched
 ;;; elements or set the vertical position of the scroll bar for every matched element.
 (export '([q].scroll-top))
-(defun [q].scroll-top (jq) (@call (jq "scrollTop"))
+(defun [q].scroll-top (jq) (@call (jq "scrollTop")))
 
 
 (in-package :cl-user)
