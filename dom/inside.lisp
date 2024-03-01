@@ -53,7 +53,7 @@
 ;;; expression or as markup created on the fly, and it is inserted into the target container.
 (export '(jq::[q].append))
 (defun [q].append (jse content &rest others)
-  (let ((f (@get jse "append" "bind") jse content))
+  (let ((f (@call (jse "append" "bind") content)))
     (apply f others)))
 
 ;;; .appendTo()
@@ -110,7 +110,7 @@
 ;;; collection (To insert it as the last child, use .append()).
 (export '(jq::[q].prepend))
 (defun [q].prepend (jse content &rest midagi)
-  (let ((f (@get jse "prepend" "bind") jse content))
+  (let ((f (@call  (jse "prepend" "bind") jse content)))
     (apply f midagi)))
 
 ;;; .prependTo()
