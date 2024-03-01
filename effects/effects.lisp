@@ -77,7 +77,7 @@
 ;;; all animations for the matched elements.
 (export '(jq::[q].finish))
 ;;;(defun [q].finish (jqe) (@call (jqe "finish")))
-(defun [q].finish (jq &rest midagi) (error "Function [q].stop not released.")
+(defun [q].finish (jq &rest midagi) (error "Function [q].stop not released."))
 
 ;;; (jq:hide jqe)
 ;;; Hide the matched elements.
@@ -238,7 +238,7 @@
 ;;;
 ;;; As of jQuery 1.7, if the first argument is provided as a string, only the animations
 ;;; in the queue represented by that string will be stopped.
-(export '(jq:[q].stop))
+(export '([q].stop))
 (defun [q].stop (jq &rest midagi)
   (let ((f (@call (jq "stop" "bind") )))
     (apply f midagi)))
