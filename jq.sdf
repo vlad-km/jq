@@ -41,14 +41,14 @@
                              (:file "misc")
                              (:file "travers")))
                (:module "effects"
-                :components (:file "animate")
-                             (:file "effects"))
-                :components ((:module "fadding"
+                :components ((:file "animate")
+                             (:file "effects")
+                             (:module "fadding"
                               :components ((:file "fade-in")
                                            (:file "fade-out")
                                            (:file "fade-toggle")
-                                           (:file "fade-to"))))
-                :components ((:module "sliding"
+                                           (:file "fade-to")))
+                             (:module "sliding"
                               :components ((:file "slide-up")
                                            (:file "slide-down")
                                            (:file "slide-toggle")))))
