@@ -16,6 +16,17 @@
               \)
 |#
 
+;;; Draggable Widget
+;;; .(draggable jq object)                   - setter
+;;; .(draggable jq "option" "stack")         - getter
+;;; .(draggable jq "option" "stack" ".prod") - setter
+;;; .(draggable jq "destroy")                - method call
+;;; See full documentation by https://api.jqueryui.com/draggable/#option-addClasses
+;;;
+(export '([qui].draggable))
+(defun [w].draggable (jq &rest midagi)
+
+)
 
 
 ;;; EOF

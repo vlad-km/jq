@@ -16,18 +16,20 @@
               \)
 |#
 
-;;; Tabs Widget
+;;;  Dialog Widget
 
-;;; .(tabs jq object)                   - setter
-;;; .(tabs jq "option" "stack")         - getter
-;;; .(tabs jq "option" "stack" ".prod") - setter
-;;; .(tabs jq "destroy")                - method call
-;;; See full documentation by https://api.jqueryui.com/tabs/
+;;; .(dialog jq object)                   - setter
+;;; .(dialog jq "option" "stack")         - getter
+;;; .(dialog jq "option" "stack" ".prod") - setter
+;;; .(dialog jq "destroy")                - method call
+;;; See full documentation by https://api.jqueryui.com/dialog/
 ;;;
-(export '([w].tabs))
-(defun [w].tabs (jq &rest midagi)
+(export '([w].dialog))
+(defun [w].dialog (jq &rest midagi)
 
 )
+
+
 
 
 ;;; EOF

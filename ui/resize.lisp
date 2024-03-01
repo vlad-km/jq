@@ -16,18 +16,19 @@
               \)
 |#
 
-;;; Tabs Widget
+;;; Resizable Widget
 
-;;; .(tabs jq object)                   - setter
-;;; .(tabs jq "option" "stack")         - getter
-;;; .(tabs jq "option" "stack" ".prod") - setter
-;;; .(tabs jq "destroy")                - method call
-;;; See full documentation by https://api.jqueryui.com/tabs/
+;;; .(Resizable jq object)                   - setter
+;;; .(Resizable jq "option" "stack")         - getter
+;;; .(Resizable jq "option" "stack" ".prod") - setter
+;;; .(Resizable jq "destroy")                - method call
+;;; See full documentation by https://api.jqueryui.com/resizable
 ;;;
-(export '([w].tabs))
-(defun [w].tabs (jq &rest midagi)
+(export '([w].Resizable))
+(defun [w].Resizable (jq &rest midagi)
 
 )
+
 
 
 ;;; EOF

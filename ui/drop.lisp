@@ -17,5 +17,19 @@
 |#
 
 
+;;; Droppable Widget
+
+;;; .(droppable jq object)                   - setter
+;;; .(droppable jq "option" "stack")         - getter
+;;; .(droppable jq "option" "stack" ".prod") - setter
+;;; .(droppable jq "destroy")                - method call
+;;; See full documentation by https://api.jqueryui.com/droppable/
+;;;
+(export '([w].droppable))
+(defun [w].droppable (jq &rest midagi)
+
+)
+
+
 
 ;;; EOF
