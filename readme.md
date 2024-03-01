@@ -32,16 +32,16 @@ All Function comments are from https://api.jquery.com
 > Location: 
 
 
-.addClass()
+#### .addClass() [+]
 Adds the specified class(es) to each element in the set of matched elements.
 
-.hasClass()
+#### .hasClass() [+]
 Determine whether any of the matched elements are assigned the given class.
 
-.removeClass()
+#### .removeClass() [+]
 Remove a single class, multiple classes, or all classes from each element in the set of matched elements.
 
-.toggleClass()
+#### .toggleClass() [+]
 Add or remove one or more classes from each element in the set of matched elements, depending on either the class’s presence or the value of the state argument.
 
 
