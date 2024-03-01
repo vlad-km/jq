@@ -16,32 +16,44 @@
              ((
               \)
 |#
-
-(lores:defsys :jq
-    :path  "git/jq"
-    :components ((:file "jq-pkg")
-                 (:module "base"
-                          (:file "jq-base"))
-                 (:module "dom"
-                          (:file "jq-general-attributes"))
-                 (:module "css"
-                          (:file "jq-class-attribute")
-                          (:file "jq-style-properties")
-                          (:file "jq-dimensions")
-                          (:file "jq-offset")
-                          (:file "jq-effects"))
-                 (:module "events"
-                          (:file "jq-mouse-events")
-                          ;;(:file "jq-form-event")
-                          ;;(:file "jq-keyboard-event")
-                          (:file "jq-event-handler"))
-                 (:module "dom"
-                          (:file "jq-dom-around")
-                          (:file "jq-dom-inside")
-                          (:file "jq-dom-outside")
-                          (:file "jq-dom-removable")
-                          (:file "jq-dom-replace"))
-                 (:file "finality")) )
+(defsys :jq
+  :author "@vlad-km"
+  :version "1.0.1"
+  :license "MIT"
+  :components ((:file "jq-pkg")
+               (:module "base"
+                :components ((:file "jq")))
+               (:module "dom"
+                :components ((:file "general-attributes")))
+               (:module "css"
+                :components ((:file "class-attribute")
+                             (:file "style-properties")
+                             (:file "dimensions")
+                             (:file "offset")))
+               (:module "dom"
+                :components ((:file "around")
+                             (:file "inside")
+                             (:file "outside")
+                             (:file "removable")
+                             (:file "replace")))
+               (:module "traversing"
+                :components ((:file "filter")
+                             (:file "misc")
+                             (:file "travers")))
+               (:module "effects"
+                :components ((:file "effects"))
+                :components ((:module "fadding"
+                              :components ((:file "fade-in")
+                                           (:file "fade-out")
+                                           (:file "fade-toggle")
+                                           (:file "fade-to"))))
+                :components ((:module "sliding"
+                              :components ((:file "slide-up")
+                                           (:file "slide-down")
+                                           (:file "slide-toggle")))))
+               (:module "events"
+                :components ((:file "event-handler")))
+               (:file "finality")))
 
 
 ;;; EOF
