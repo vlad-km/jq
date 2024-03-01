@@ -75,9 +75,9 @@
 ;;; .finish()    v.1.9.*
 ;;; Stop the currently-running animation, remove all queued animations, and complete
 ;;; all animations for the matched elements.
-;;; (export '(jq::[q].finish))
-;;; (defun [q].finish (jqe) (@call (jqe "finish")))
-
+(export '(jq::[q].finish))
+;;;(defun [q].finish (jqe) (@call (jqe "finish")))
+(defun [q].finish (jq &rest midagi) (error "Function [q].stop not released.")
 
 ;;; (jq:hide jqe)
 ;;; Hide the matched elements.
@@ -243,6 +243,7 @@
   (let ((f (@call (jq "stop" "bind") )))
     (apply f midagi)))
 
+;;; todo: separate file
 ;;; (jq:toggle jqe)
 ;;; Display or hide the matched elements.
 ;;;
@@ -254,8 +255,8 @@
 ;;;          display
 ;;;          Type: Boolean
 ;;;          Use true to show the element or false to hide it.
-(export '(jq::[q].toggle))
-(defun [q].toggle (jqe &optional (duration "")) (@call (jqe "toggle") duration))
+;;;(export '(jq::[q].toggle))
+;;;(defun [q].toggle (jqe &optional (duration "")) (@call (jqe "toggle") duration))
 
 
 (in-package :cl-user)
