@@ -64,37 +64,22 @@
 ;;;      When multiple filtering arguments are given, all of the arguments provided must match for
 ;;;      the event handler to be removed.
 
-
-(defun off (jse &optional events selector handler)
-    (if handler
-        (funcall ((oget jse "off" "bind") jse events selector handler))
-        (if selector
-            (funcall ((oget jse "off" "bind") jse events selector))
-            (if events
-                (funcall ((oget jse "off" "bind") jse events))
-                (funcall ((oget jse "off" "bind") jse))))))
-
-(export '(jq::off))
-
-
+(export '([q].off))
+(defun [q].off (jq &rest midagi)
+  (let ((f (@call (jq "off" "bind") jq)))
+    (apply f midagi)))
 
 ;;; .on()
 ;;; Attach an event handler function for one or more events to the selected elements.
 ;;;
 ;;;
-(defun on (jse event handler)
-    (funcall ((oget jse "on" "bind") jse event handler)))
-
-(export '(jq::on))
-
+(export '([q].on))
+(defun [q].on (jse event handler) (@call (jq "on") handler ))
 
 ;;; .one()
 ;;; Attach a handler to an event for the elements. The handler is executed at most once per element per event type.
-(defun one (jse event handler)
-    (funcall ((oget jse "one" "bind") jse event handler)))
-
-(export '(jq::one))
-
+(export '([q].one))
+(defun [q].one (jq event handler) (@call (jq "one") event handler))
 
 ;;; .trigger()
 ;;; Execute all handlers and behaviors attached to the matched elements for the given event type.
