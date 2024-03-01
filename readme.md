@@ -19,13 +19,53 @@ In the release all files have the following names:
 
 So: JS-function _`.next`_ this is a lisp name  _`(jq:[q].next)`_ or _`([q].next)`_
 
+#### For example 
+Next function from demo https://jqueryui.com/droppable/#photo-manager
+
+```js
+function recycleImage( $item ) {
+			$item.fadeOut(function() {
+				$item
+					.find( "a.ui-icon-refresh" )
+						.remove()
+					.end()
+					.css( "width", "96px")
+					.append( trash_icon )
+					.find( "img" )
+						.css( "height", "72px" )
+					.end()
+					.appendTo( $gallery )
+					.fadeIn();
+			});
+		}
+```
+
+can be implemented as
+
+```lisp
+(defun recycle-image ($item)
+  (let* ((fade-out-fn
+          (lambda ()
+            (funcall
+             (chain (rcurry #'[q].find "a.ui-icon-refresh")
+                        #'[q].end
+                        (rcurry #'[q].css  "height" "72px")
+                        (rcurry #'[q].append trash_icon)
+                        (rcurry #'[q].find "img")
+                        (rcurry #'[q].css "height" "72px")
+                        #'[q].end
+                        (rcurry #'[q].append-to $gallery)
+                        #'[q].fade-in)
+             $item))))
+    (jq:fade-out fade-out-fn)))
+```
 
 ## Disclaim
 Сompiles only in the environment _`JSCL (Moren edition) Electron`_
 
 JQuiery version _`1.8.3`_
 
-All Function comments are from https://api.jquery.com
+All Function comments are from https://api.jquery.com & https://api.jqueryui.com/
 
 
 ## Category: Class Attribute
